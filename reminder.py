@@ -38,6 +38,7 @@ def teleminder():
     except Exception:
         print(INTERNAL_ERROR_MESSAGE)
         send_telegram_message(CHAT_ID, INTERNAL_ERROR_MESSAGE)
+        exit(1)
 
 
 if __name__ == '__main__':
