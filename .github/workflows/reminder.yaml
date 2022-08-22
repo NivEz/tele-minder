@@ -11,5 +11,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+
       - name: Run Python script
         run: python3 reminder.py
