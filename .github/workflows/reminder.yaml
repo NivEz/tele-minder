@@ -1,0 +1,13 @@
+name: Telegram reminder
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check workflows on first commit
+        run: echo first commit
