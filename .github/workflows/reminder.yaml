@@ -1,8 +1,7 @@
 name: Telegram reminder
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '0 */4,8-20 * * *'
 
 jobs:
   reminder:
