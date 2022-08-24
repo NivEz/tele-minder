@@ -6,9 +6,9 @@ load_dotenv()
 
 # constants
 BASE_URL = "https://api.telegram.org/bot"
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
 METHOD = "sendMessage"
-CHAT_ID = os.environ.get("CHAT_ID")
 MESSAGE = "תקפיץ את המודעה!"
 TELEGRAM_ERROR_MESSAGE = "A Telegram error has occurred..."
 

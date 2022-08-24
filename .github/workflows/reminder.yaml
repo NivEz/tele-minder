@@ -1,7 +1,8 @@
 name: Telegram reminder
 on:
-  schedule:
-    - cron: '*/15 * * * *'
+  push:
+    branches:
+      - main
 
 jobs:
   reminder:
@@ -13,5 +14,8 @@ jobs:
       - name: Install Python packages
         run: pip install -r requirements.txt
 
-      - name: Run Python script
-        run: python3 reminder.py
+      - name: Run Python script with env vars
+        run: |
+          export TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }}
+          export CHAT_ID=${{ secrets.CHAT_ID }}
+          python3 reminder.py
